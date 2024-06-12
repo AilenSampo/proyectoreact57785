@@ -1,15 +1,15 @@
-import { Footer } from "./components/Footer/Footer";
-import {NavBar} from "./components/Navbar/NavBar";
+import { NavBar } from "./components/Navbar/NavBar";
+import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
+
 
 function App() {
 
   return (
     <div>
-      <NavBar />
-
-      <Footer />
+      <NavBar/> 
+      <ItemListContainer greeting="Bienvenid@ al poyecto de Ailen Sampo 😎"/>
     </div>
   );
-}
+};
 
 export default App;
