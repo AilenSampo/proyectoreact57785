@@ -1,14 +1,29 @@
 import { NavBar } from "./components/Navbar/NavBar";
 import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
 
-function App() {
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { Cart } from "./pages/Cart";
 
-  return (
-    <div>
-      <NavBar/> 
-      <ItemListContainer greeting="Bienvenid@ al poyecto de Ailen Sampo 😎"/>
-    </div>
-  );
-};
+
+function App() {
+  return 
+  <BrowserRouter>
+    <Routes>
+      
+      <Routes element={<NavBar/>}>
+
+        <Route path ="/" element={<ItemListContainer/>} />
+        <Route path ="/cart" element={<Cart/>}/>
+        <Route path ="/login" element={<h1>Estás en el login</h1>}/>
+        <Route element={<ItemDetailContainer/>}/>
+
+      </Routes>
+      
+    </Routes>
+  </BrowserRouter>
+
+
+  
+}
 
 export default App;

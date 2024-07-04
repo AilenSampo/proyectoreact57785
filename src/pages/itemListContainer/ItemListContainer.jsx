@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import ItemList from './ItemList';
-import { products} from "../products";
+import ItemList from "./ItemList";
+import { products } from "../products";
 
 const ItemListContainer = ({ greeting }) => {
-  const [items, setItems] = useState ([]);
-  const [error, setError] = useState (());
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     const getProducts = new Promise((resolve, reject) => {
       let x = true;
-      if (x){
-      resolve(products);
-    } else {
-      reject ({ message: "error", codigo: "404"});
-    }
+      if (x) {
+        resolve(products);
+      } else {
+        reject({ message: "error", codigo: "404" });
+      }
     });
 
     getProducts
       .then((res) => {
-        setItems (res);
+        setItems(res);
       })
       .catch((error) => {
-        setError (error);
+        setError(error);
       });
   }, []);
 
   return (
     <>
       <div>{greeting}</div>
-      <ItemList items = {items} />;
+      <ItemList items={items} />
     </>
   );
 }

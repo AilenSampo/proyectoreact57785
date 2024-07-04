@@ -1,4 +1,4 @@
-let products =
+export const products =
 [
     {
     id: 7635718321720,
