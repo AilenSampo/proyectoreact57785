@@ -1,10 +1,12 @@
 import React from 'react';
-import { Productcard } from "../../components/productCart/Productcard";
+import ProductCard from "../../components/productCart/ProductCard";
 
 const ItemList = ({ items }) => {
   return (
     <div style={{ display: "flex", gap: "20px" }}>
-      <h1>{items[0].title}</h1>
+      {items.map((item) => (
+        <ProductCard key={item.id} item={item} />
+      ))}
     </div>
   );
 };
