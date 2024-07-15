@@ -14,11 +14,15 @@ export const NavBar = () => {
                     </Link>
                    
 
-                    <ul className="categoria"></ul>
+                    <ul className="categoria">
+
                         <li className="categoriaLi">Styling</li>
                         <li className="categoriaLi">Haircare</li>
                         <li className="categoriaLi">Coloración</li>
                         <li className="categoriaLi">Tratamientos</li>
+                        
+                    </ul>
+                    
 
                     <CartWidget/>         
                 </div>
@@ -29,4 +33,6 @@ export const NavBar = () => {
     
 );
 }
+
+
 

@@ -10,13 +10,14 @@ function App() {
 
 return(   
 
-<BrowserRouter>             
-  <Routes element={<NavBar/>}>  
+<BrowserRouter> 
+  <NavBar/>            
+  <Routes>  
 
     <Route path ="/" element={<ItemListContainer/>} />          
     <Route path ="/cart" element={<Cart/>}/>          
     <Route path ="/login" element={<h1>Estás en el login</h1>}/>          
-    <Route element={<ItemDetailContainer/>}/>    
+    <Route path="/item/:id" element={<ItemDetailContainer />} />  
 
   </Routes>     
 </BrowserRouter>   )
