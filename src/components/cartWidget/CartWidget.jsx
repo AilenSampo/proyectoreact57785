@@ -1,12 +1,16 @@
-import { BsCart2 } from "react-icons/bs";
-import {Link} from "react-router-dom"
+import { Badge } from "@mui/material";
+import {Link} from "react-router-dom";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 export const CartWidget = () => {
   return (
     <div>
         
         <Link to = "/cart">
-          <BsCart2 size= "30px"/>
+           <Badge badgeContent={0} color="white">
+              <ShoppingCartIcon color="action" />
+            </Badge>
         </Link>
 
     </div>

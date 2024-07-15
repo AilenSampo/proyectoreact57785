@@ -1,7 +1,7 @@
 export const products =
 [
     {
-    id: 7798135960155
+    id: 7798135960155,
     title: "Acondicionador Acido X 1 Lt. -  Color Master - Fidelite",
     imagen : "https://s3.amazonaws.com/EcomExpertsUserFiles/19449%2F8708-36200.jpeg", 
     Categoria: "Capilar",

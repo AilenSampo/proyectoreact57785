@@ -9,9 +9,9 @@ export const NavBar = () => {
             <>
                 <div className= "navbarContainer">
                     
-                    <link to="/">
+                    <Link to="/">
                      <img className = "logo" src="https://res.cloudinary.com/dcykb0ea5/image/upload/v1718222230/_a7ff62ea-f0a2-4d9e-bc6d-c52ea44b9d78_ecsxxd.jpg" alt="Logo" />
-                    </link>
+                    </Link>
                    
 
                     <ul className="categoria"></ul>
