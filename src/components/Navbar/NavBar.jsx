@@ -15,12 +15,18 @@ export const NavBar = () => {
                    
 
                     <ul className="categoria">
-
-                        <li className="categoriaLi">Styling</li>
-                        <li className="categoriaLi">Haircare</li>
-                        <li className="categoriaLi">Coloración</li>
-                        <li className="categoriaLi">Tratamientos</li>
-                        
+                        <li className="categoriaLi">
+                        <Link to="/category/styling">Styling</Link>
+                        </li>
+                        <li className="categoriaLi">
+                        <Link to="/category/haircare">Haircare</Link>
+                        </li>
+                        <li className="categoriaLi">
+                        <Link to="/category/coloracion">Coloración</Link>
+                        </li>
+                        <li className="categoriaLi">
+                        <Link to="/category/tratamientos">Tratamientos</Link>
+                        </li>
                     </ul>
                     
 
