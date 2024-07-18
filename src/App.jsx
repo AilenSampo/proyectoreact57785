@@ -17,7 +17,7 @@ return(
     <Route path ="/" element={<ItemListContainer/>} />          
     <Route path ="/cart" element={<Cart/>}/>          
     <Route path ="/login" element={<h1>Estás en el login</h1>}/>          
-    <Route path="/item/:id" element={<ItemDetailContainer />} />  
+    <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />  
 
   </Routes>     
 </BrowserRouter>   )

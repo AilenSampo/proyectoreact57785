@@ -6,11 +6,12 @@ const ItemList = ({ items }) => {
     <div style={{ display: "flex", gap: "20px" }}>
       {items.map((item) => (
         <ProductCard 
-        key={item.id} 
-        title={item.title} 
-        description={item.description} price={item.price} 
-        item={item} 
-        id={item.id}
+          key={item.id} 
+          title={item.title} 
+          Stock={item.Stock} 
+          price={item.price} 
+          id={item.id}
+          image={item.image} // Asegúrate de que el nombre de la propiedad coincida
         />
       ))}
     </div>
