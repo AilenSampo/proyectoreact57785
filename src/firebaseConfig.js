@@ -3,7 +3,7 @@
 // import {getFirestore} from "firebase/firestore"
 
 // const firebaseConfig = {
-//   apiKey: "AIzaSyA7gh-5X_XHKZHYyqv23vxkIYolhRnJweM",
+//   apiKey: import.meta.env.VITE_APIKEY,
 //   authDomain: "ecommerceailensampo.firebaseapp.com",
 //   projectId: "ecommerceailensampo",
 //   storageBucket: "ecommerceailensampo.appspot.com",
