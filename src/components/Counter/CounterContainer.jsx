@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Counter } from "./Counter";
 
-const CounterContainer = () => {
+const CounterContainer = ({ onAdd }) => {
   const [contador, setContador] = useState(1);
+
   const sumar = () => {
     setContador(contador + 1);
   };
@@ -11,9 +12,16 @@ const CounterContainer = () => {
     if (contador > 1) {
       setContador(contador - 1);
     } else {
-      alert("Minimo");
+      alert("Mínimo");
     }
   };
-  return <Counter contador={contador} sumar={sumar} restar={restar} />;
+
+  return (
+    <>
+      <Counter contador={contador} sumar={sumar} restar={restar} />
+      <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
+    </>
+  );
 };
+
 export default CounterContainer;

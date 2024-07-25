@@ -1,9 +1,11 @@
-export const Counter = ({ restar, contador, sumar }) => {
+import React from 'react';
+
+export const Counter = ({ contador, sumar, restar }) => {
   return (
-    <div>
-      <button onClick={restar}>Restar</button>
-      <h2> {contador} </h2>
-      <button onClick={sumar}>Sumar</button>
+    <div className="counter">
+      <button onClick={restar}>-</button>
+      <span>{contador}</span>
+      <button onClick={sumar}>+</button>
     </div>
   );
 };
