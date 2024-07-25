@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Counter } from "./Counter";
 
 const CounterContainer = ({ onAdd }) => {
@@ -17,10 +17,10 @@ const CounterContainer = ({ onAdd }) => {
   };
 
   return (
-    <>
+    <div>
       <Counter contador={contador} sumar={sumar} restar={restar} />
       <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
-    </>
+    </div>
   );
 };
 
