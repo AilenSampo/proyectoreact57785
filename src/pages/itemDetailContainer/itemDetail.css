@@ -1,0 +1,35 @@
+.containerItemDetail {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+}
+
+.containerImage {
+  flex: 1;
+  padding: 16px;
+}
+
+.containerImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.containerDetail {
+  flex: 2;
+  padding: 16px;
+}
+
+.containerDetail h2 {
+  font-family: 'Roboto', sans-serif;
+  margin: 8px 0;
+}
+
+.containerDetail span {
+  font-size: 23px;
+  color: #333;
+}

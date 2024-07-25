@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
           Stock={item.Stock} 
           price={item.price} 
           id={item.id}
-          image={item.image} // Asegúrate de que el nombre de la propiedad coincida
+          image={item.image} 
         />
       ))}
     </div>

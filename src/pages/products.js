@@ -22,7 +22,7 @@ export const products =
     image : "https://s3.amazonaws.com/EcomExpertsUserFiles/19449%2F3035-22636.jpeg", 
     category: "haircare",
     Price: 19392,
-    Stock: 128,
+    Stock: 12,
 },
 {
     id: 7798135961428,

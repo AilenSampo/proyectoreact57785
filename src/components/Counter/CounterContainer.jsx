@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Box, Button, Typography } from '@mui/material';
 import { Counter } from "./Counter";
 
 const CounterContainer = ({ onAdd }) => {
@@ -17,10 +18,12 @@ const CounterContainer = ({ onAdd }) => {
   };
 
   return (
-    <div>
+    <Box>
       <Counter contador={contador} sumar={sumar} restar={restar} />
-      <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
-    </div>
+      <Button variant="contained" color="primary" onClick={() => onAdd(contador)}>
+        Agregar al carrito
+      </Button>
+    </Box>
   );
 };
 

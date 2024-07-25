@@ -1,27 +1,26 @@
 import React from 'react';
-import CounterContainer from './CounterContainer';
+import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material';
+import CounterContainer from "../../components/Counter/CounterContainer";
 
 export const ItemDetail = ({ item, onAdd }) => {
   return (
-    <div>
-      <div className={"containerItemDetail"}>
-        <div className={"containerImage"}>
-          <img src={item.img} alt={item.title} />
-        </div>
-        <div className={"containerDetail"}>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Nombre:</span> {item.title}
-          </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Descripción:</span> {item.description}
-          </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Precio:</span> ${item.price}.-
-          </h2>
-        </div>
-      </div>
-      <CounterContainer onAdd={onAdd} />
-    </div>
+    <Card sx={{ display: 'flex', margin: 2, padding: 2, borderRadius: 2 }}>
+      <CardMedia
+        component="img"
+        sx={{ width: 200, borderRadius: 1 }}
+        image={item.image}
+        alt={item.title}
+      />
+      <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Typography variant="h5" component="div">
+          <strong>Nombre:</strong> {item.title}
+        </Typography>
+        <Typography variant="h6" component="div" color="text.secondary">
+          <strong>Precio:</strong> ${item.Price}
+        </Typography>
+        <CounterContainer onAdd={onAdd} />
+      </CardContent>
+    </Card>
   );
 };
 
