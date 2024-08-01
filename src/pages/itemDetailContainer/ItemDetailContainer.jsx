@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         if (productSnap.exists()) {
           setItem({ ...productSnap.data(), id: productSnap.id }); 
         } else {
-          console.log("No such document!");
+
         }
       } catch (err) {
         setError(err);
