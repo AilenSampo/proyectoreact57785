@@ -2,6 +2,13 @@
 
 # Este proyecto trata de un ecommerce de venta de productos capilares.
 
+## Enlace de la Aplicación
+
+Puedes ver la versión desplegada de la aplicación en el siguiente enlace:
+
+- [Aplicación en Vercel](https://proyectoreact57785.vercel.app/)
+
+
 ## Descripción
 
 Este es un proyecto de React que implementa una tienda en línea para productos de cuidado del cabello. Incluye funcionalidades como un carrito de compras, una lista de productos, y detalles de productos. Está diseñado para ser modular y escalable, utilizando tecnologías modernas para una experiencia de usuario fluida.
