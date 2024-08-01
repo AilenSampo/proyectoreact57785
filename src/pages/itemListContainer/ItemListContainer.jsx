@@ -7,7 +7,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
-  const { categoryName } = useParams(); // Usa categoryName que es el parámetro de la URL
+  const { categoriaName } = useParams(); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,8 +15,8 @@ const ItemListContainer = () => {
         let productsCollection = collection(database, "products");
 
         let consulta = productsCollection;
-        if (categoryName) {
-          consulta = query(productsCollection, where("category", "==", categoryName));
+        if (categoriaName) { 
+          consulta = query(productsCollection, where("categoria", "==", categoriaName));
         }
 
         const res = await getDocs(consulta);
@@ -31,7 +31,7 @@ const ItemListContainer = () => {
     };
 
     fetchData();
-  }, [categoryName]);
+  }, [categoriaName]);
 
   return (
     <>

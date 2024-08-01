@@ -19,11 +19,11 @@ const CartContextProvider = ({ children }) => {
         } else {
           return elemento;
         }
-      }); 
+      });
 
       setCart(newArray);
       localStorage.setItem("cart", JSON.stringify(newArray));
-        } else {
+    } else {
       setCart([...cart, product]);
       localStorage.setItem("cart", JSON.stringify([...cart, product]));
     }
@@ -35,7 +35,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    let existe = cart.some((product) => product.id === id); // true - false
+    let existe = cart.some((product) => product.id === id); 
     return existe;
   };
 
@@ -56,7 +56,8 @@ const CartContextProvider = ({ children }) => {
     }, 0);
     return total;
   };
-    const getTotalItems = () => {
+
+  const getTotalItems = () => {
     let total = cart.reduce((acc, elemento) => {
       return acc + elemento.quantity;
     }, 0);
@@ -77,4 +78,3 @@ const CartContextProvider = ({ children }) => {
 };
 
 export default CartContextProvider;
-

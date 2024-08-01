@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material';
+import { Typography, Card, CardMedia, CardContent } from '@mui/material';
 import CounterContainer from "../../components/Counter/CounterContainer";
 
 export const ItemDetail = ({ item, onAdd }) => {
@@ -8,7 +8,7 @@ export const ItemDetail = ({ item, onAdd }) => {
       <CardMedia
         component="img"
         sx={{ width: 200, borderRadius: 1 }}
-        imagen={item.imagen}
+        image={item.imagen}
         alt={item.title}
       />
       <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
