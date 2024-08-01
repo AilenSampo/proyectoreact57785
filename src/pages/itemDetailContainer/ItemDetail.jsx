@@ -8,7 +8,7 @@ export const ItemDetail = ({ item, onAdd }) => {
       <CardMedia
         component="img"
         sx={{ width: 200, borderRadius: 1 }}
-        image={item.image}
+        imagen={item.imagen}
         alt={item.title}
       />
       <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>

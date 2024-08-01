@@ -1,29 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
-import { products } from '../products';
 import { useParams } from 'react-router-dom';
+import { database } from '../../firebaseConfig';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
-  const { categoryName } = useParams(); // Asegúrate de que categoryName coincida con el parámetro de la URL
+  const { categoryName } = useParams(); // Usa categoryName que es el parámetro de la URL
 
   useEffect(() => {
-    const getProducts = () => {
-      let filteredProducts = products;
+    const fetchData = async () => {
+      try {
+        let productsCollection = collection(database, "products");
 
-      if (categoryName) {
-        filteredProducts = products.filter(product => product.category === categoryName);
+        let consulta = productsCollection;
+        if (categoryName) {
+          consulta = query(productsCollection, where("category", "==", categoryName));
+        }
+
+        const res = await getDocs(consulta);
+        const arrayValido = res.docs.map((product) => ({
+          ...product.data(),
+          id: product.id
+        }));
+        setItems(arrayValido);
+      } catch (error) {
+        setError(error);
       }
-
-      setItems(filteredProducts);
     };
 
-    try {
-      getProducts();
-    } catch (error) {
-      setError(error);
-    }
+    fetchData();
   }, [categoryName]);
 
   return (
