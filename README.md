@@ -9,6 +9,12 @@ Puedes ver la versión desplegada de la aplicación en el siguiente enlace:
 - [Aplicación en Vercel](https://proyectoreact57785.vercel.app/)
 
 
+## Entrega de Repositorio
+
+Puedes acceder al repositorio de la aplicación en el siguiente enlace:
+
+- [Repositorio en GitHub](https://github.com/AilenSampo/proyectoreact57785)
+
 ## Descripción
 
 Este es un proyecto de React que implementa una tienda en línea para productos de cuidado del cabello. Incluye funcionalidades como un carrito de compras, una lista de productos, y detalles de productos. Está diseñado para ser modular y escalable, utilizando tecnologías modernas para una experiencia de usuario fluida.
