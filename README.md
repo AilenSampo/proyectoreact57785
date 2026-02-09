@@ -88,3 +88,8 @@ Este es un proyecto de React que implementa una tienda en línea para productos 
 
 
 
+09/02
+
+instalar plugin 
+
+*npm i -D vite-plugin-pwa

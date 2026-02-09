@@ -8,8 +8,7 @@ const ItemListContainer = () => {
   const { categoriaName } = useParams();
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-  console.log(categoriaName);  
+  useEffect(() => { 
   
   let productsCollection = collection(database, "products");
   let consulta = productsCollection;
