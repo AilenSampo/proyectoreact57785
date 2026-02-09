@@ -10,7 +10,8 @@ function App() {
   return (
     <BrowserRouter> 
       <CartContextProvider>
-        <NavBar/>            
+        <NavBar/>       
+           <h1>prueba APP</h1>     
         <Routes>  
           <Route path="/" element={<ItemListContainer />} />          
           <Route path="/cart" element={<Cart />} />          
