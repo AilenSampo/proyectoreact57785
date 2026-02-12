@@ -1,0 +1,76 @@
+.reqForm{
+  max-width: 720px;
+  margin-top: 14px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: var(--radius, 16px);
+  padding: 18px;
+  box-shadow: var(--shadow, 0 8px 20px rgba(0,0,0,0.06));
+}
+
+.reqGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field.full{
+  grid-column: 1 / -1;
+}
+
+.field label{
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text, #111827);
+}
+
+.field input,
+.field textarea{
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color: var(--primary, #2F6BFF);
+  box-shadow: 0 0 0 4px rgba(47,107,255,0.15);
+}
+
+.reqError{
+  margin: 12px 0 0;
+  color: crimson;
+  font-weight: 600;
+}
+
+.reqBtn{
+  margin-top: 14px;
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: var(--primary, #2F6BFF);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reqBtn:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 640px){
+  .reqGrid{ grid-template-columns: 1fr; }
+}

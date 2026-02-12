@@ -1,32 +1,44 @@
-/* Color Theme Swatches in Hex */
-/* .Moda-1-hex { color: #BF5E66; }
-.Moda-2-hex { color: #000C0D; }
-.Moda-3-hex { color: #012626; }
-.Moda-4-hex { color: #A69281; }
-.Moda-5-hex { color: #FCE9DA; } */
-
-.navbarContainer{
-    background-color: #FCE9DA;
-    color:#BF5E66 ;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
+.topNav{
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
 }
 
-.logo{
-    width: 80px;
-    height: 80px;
+.topNavInner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-.categoria{
-    justify-content: center;
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    
+.topNavLinks{
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
+.topNavLink{
+  text-decoration: none;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
 
+.topNavLink.active{
+  color: var(--text);
+  background: rgba(0,0,0,0.06);
+}
+
+.topNavButton{
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+}

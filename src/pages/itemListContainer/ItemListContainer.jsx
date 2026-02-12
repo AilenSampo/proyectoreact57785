@@ -10,11 +10,11 @@ const ItemListContainer = () => {
 
   useEffect(() => { 
   
-  let productsCollection = collection(database, "products");
-  let consulta = productsCollection;
+  let servicesCollection = collection(database, "services");
+  let consulta = servicesCollection;
 
   if (categoriaName) {
-    consulta = query(productsCollection, where("Categoria", "==", categoriaName));
+    consulta = query(servicesCollection, where("category", "==", categoriaName));
   }
 
   getDocs(consulta)
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
       setItems(arrayValido);
     })
     .catch((error) => {
-      console.error("Error fetching products: ", error);
+      console.error("Error fetching services: ", error);
     });
 }, [categoriaName]);
 

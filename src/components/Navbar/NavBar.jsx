@@ -1,44 +1,47 @@
-import "./navbar.css"
-import { CartWidget } from "../cartWidget/CartWidget";
-import {Link, Outlet} from "react-router-dom"
- 
+import "./navbar.css";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
-    return (
-        <div>
-            <>
-                <div className= "navbarContainer">
-                    
-                    <Link to="/">
-                     <img className = "logo" src="https://res.cloudinary.com/dcykb0ea5/image/upload/v1718222230/_a7ff62ea-f0a2-4d9e-bc6d-c52ea44b9d78_ecsxxd.jpg" alt="Logo" />
-                    </Link>
-                   
+  const location = useLocation();
 
-                    <ul className="categoria">
-                        <li className="categoriaLi">
-                        <Link to="/Categoria/styling">Styling</Link>
-                        </li>
-                        <li className="categoriaLi">
-                        <Link to="/Categoria/haircare">Haircare</Link>
-                        </li>
-                        <li className="categoriaLi">
-                        <Link to="/Categoria/coloracion">Coloración</Link>
-                        </li>
-                        <li className="categoriaLi">
-                        <Link to="/Categoria/tratamientos">Tratamientos</Link>
-                        </li>
-                    </ul>
-                    
+  const isActive = (path) => location.pathname === path;
 
-                    <CartWidget/>         
-                </div>
-            </>
-            <Outlet />
-        </div>   
-            
-    
-);
-}
+  return (
+    <div>
+      <header className="topNav">
+        <nav className="topNavInner">
+          <div className="topNavLinks">
+            <Link
+              to="/"
+              className={`topNavLink ${isActive("/") ? "active" : ""}`}
+            >
+              Inicio
+            </Link>
 
+            <Link
+              to="/servicios"
+              className={`topNavLink ${isActive("/servicios") ? "active" : ""}`}
+            >
+              Servicios
+            </Link>
 
+            <Link
+              to="/mis-solicitudes"
+              className={`topNavLink ${
+                isActive("/mis-solicitudes") ? "active" : ""
+              }`}
+            >
+              Mis Solicitudes
+            </Link>
+          </div>
 
+          <Link to="/solicitar" className="topNavButton">
+            Solicitar Servicio
+          </Link>
+        </nav>
+      </header>
+
+      <Outlet />
+    </div>
+  );
+};
